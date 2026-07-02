@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-        <div class="text-2xl font-bold">Yasser<span class="text-red-500">.</span>Hamdy</div>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-red-500 transition">Home</a>
-            <a href="about.html" class="hover:text-red-500 transition">About</a>
-            <a href="projects.html" class="hover:text-red-500 transition">Projects</a>
-            <a href="services.html" class="hover:text-red-500 transition">Services</a>
-            <a href="contact.html" class="hover:text-red-500 transition">Contact</a>
-        </div>
-    </div>
-</nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasser Hamdy | Telecommunications and Electronics Engineer Specialized in Cybersecurity</title>
+    <title>Yasser Hamdy | Cybersecurity Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #e5e5e5; }
-        .glass { background: rgba(15,15,15,0.85); backdrop-filter: blur(16px); border: 1px solid rgba(255,59,59,0.2); }
+        body { background-color: #050505; color: #e5e5e5; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/id/1015/1920/1080'); background-size: cover; }
+        .glass { background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); }
         .accent { color: #ff3b3b; }
+        .slide { transition: opacity 1.5s; }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full glass z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight">Yasser<span class="accent">.</span>Hamdy</div>
-            <div class="flex gap-8 text-sm">
-                <a href="index.html" class="hover:text-red-500 transition">Home</a>
-                <a href="about.html" class="hover:text-red-500 transition">About</a>
-                <a href="projects.html" class="hover:text-red-500 transition">Projects</a>
-                <a href="services.html" class="hover:text-red-500 transition">Services</a>
-                <a href="contact.html" class="hover:text-red-500 transition">Contact</a>
-            </div>
+<nav class="fixed top-0 w-full glass z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">Yasser<span class="accent">.</span>Hamdy</div>
+        <div class="flex gap-8 text-sm font-medium">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="projects.html" class="hover:text-red-500">Projects</a>
+            <a href="services.html" class="hover:text-red-500">Services</a>
+            <a href="contact.html" class="hover:text-red-500">Contact</a>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-black to-zinc-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
-                Secure.<br>Build.<br><span class="accent">Defend.</span>
-            </h1>
-            <p class="text-2xl text-gray-400 max-w-2xl">
-                Cybersecurity Engineer & Penetration Tester<br>
-                Turning vulnerabilities into strength.
-            </p>
-            <div class="mt-10 flex gap-6">
-                <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-2xl text-lg font-medium">Book a Security Consultation</a>
-                <a href="projects.html" class="border border-white/30 hover:border-white px-8 py-4 rounded-2xl text-lg">View My Work</a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Simple booking form logic (will be expanded later)
-    </script>
-    <footer class="bg-black border-t border-white/10 py-12 mt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
-        <p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
-        <p class="mt-2">
-            <a href="mailto:yasserhamdy910@gmail.com" class="hover:text-red-500">yasserhamdy910@gmail.com</a>
-        </p>
     </div>
-</footer>
+</nav>
+
+<!-- Hero with Slideshow -->
+<section id="hero" class="hero-bg min-h-screen flex items-center relative">
+    <div class="max-w-7xl mx-auto px-6 z-10">
+        <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">
+            Secure.<br>Build.<br><span class="accent">Defend.</span>
+        </h1>
+        <p class="text-2xl text-gray-300 max-w-xl mb-10">
+            Cybersecurity Engineer & Penetration Tester<br>
+            Protecting critical infrastructure with precision.
+        </p>
+        <div class="flex gap-6">
+            <a href="contact.html" class="bg-red-600 hover:bg-red-700 px-10 py-5 rounded-2xl text-lg font-semibold">Book a Consultation</a>
+            <a href="projects.html" class="border border-white/40 hover:bg-white/10 px-10 py-5 rounded-2xl text-lg">Explore My Work</a>
+        </div>
+    </div>
+
+    <!-- Floating Badges -->
+    <div class="absolute bottom-12 left-1/2 flex gap-8 text-sm">
+        <div class="text-center">
+            <div class="text-3xl font-bold accent">8+</div>
+            <div class="text-xs tracking-widest">HACKERONE REPORTS</div>
+        </div>
+        <div class="text-center">
+            <div class="text-3xl font-bold accent">98%</div>
+            <div class="text-xs tracking-widest">CCNA SCORE</div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Simple slideshow background
+    const images = [
+        'https://picsum.photos/id/1015/1920/1080',
+        'https://picsum.photos/id/201/1920/1080',
+        'https://picsum.photos/id/866/1920/1080'
+    ];
+    let current = 0;
+    const hero = document.getElementById('hero');
+    
+    setInterval(() => {
+        current = (current + 1) % images.length;
+        hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('${images[current]}')`;
+    }, 7000);
+</script>
 </body>
 </html>

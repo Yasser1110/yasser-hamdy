@@ -1,80 +1,32 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-        <div class="text-2xl font-bold">Yasser<span class="text-red-500">.</span>Hamdy</div>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-red-500 transition">Home</a>
-            <a href="about.html" class="hover:text-red-500 transition">About</a>
-            <a href="projects.html" class="hover:text-red-500 transition">Projects</a>
-            <a href="services.html" class="hover:text-red-500 transition">Services</a>
-            <a href="contact.html" class="hover:text-red-500 transition">Contact</a>
-        </div>
-    </div>
-</nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Yasser Hamdy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        body { background-color: #0a0a0a; color: #e5e5e5; }
-        .glass { background: rgba(15,15,15,0.85); backdrop-filter: blur(16px); border: 1px solid rgba(255,59,59,0.15); }
-        .accent { color: #ff3b3b; }
-    </style>
+    <style> body { background-color: #050505; color: #e5e5e5; } .glass { background: rgba(10,10,10,0.9); backdrop-filter: blur(16px); } .accent { color: #ff3b3b; } </style>
 </head>
 <body>
-    <nav class="fixed top-0 w-full glass z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="text-2xl font-bold">Yasser<span class="accent">.</span>Hamdy</div>
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar -->
 
     <div class="max-w-6xl mx-auto px-6 pt-32 pb-20">
-        <h1 class="text-5xl font-bold mb-4 accent">My Services</h1>
-        <p class="text-xl text-gray-400 mb-16">Professional Cybersecurity & Secure Development Solutions</p>
+        <h1 class="text-5xl font-bold mb-4 accent">Services</h1>
 
         <div class="grid md:grid-cols-2 gap-8">
             <div class="glass p-8 rounded-3xl">
-                <i class="fas fa-bug text-4xl accent mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-4">Web Application Penetration Testing</h3>
-                <p class="text-gray-400">OWASP Top 10, XSS, IDOR, API Security, Authentication Testing.</p>
+                <h3 class="text-2xl font-semibold mb-4">Web Penetration Testing</h3>
+                <p class="text-gray-400">Full web application security assessment (OWASP, XSS, API, etc.)</p>
             </div>
-
             <div class="glass p-8 rounded-3xl">
-                <i class="fas fa-network-wired text-4xl accent mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-4">Infrastructure Hardening & VoIP Security</h3>
-                <p class="text-gray-400">Network Security, VoIP Gateway Setup, Firewall Configuration.</p>
+                <h3 class="text-2xl font-semibold mb-4">IoT Security (ESP32)</h3>
+                <p class="text-gray-400">Design & Secure IoT devices using ESP32 for physical security solutions.</p>
             </div>
-
-            <div class="glass p-8 rounded-3xl">
-                <i class="fas fa-robot text-4xl accent mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-4">Secure Full-Stack Development</h3>
-                <p class="text-gray-400">Building secure web applications with DevSecOps practices.</p>
-            </div>
-
-            <div class="glass p-8 rounded-3xl">
-                <i class="fas fa-shield-alt text-4xl accent mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-4">Security Consultation & Training</h3>
-                <p class="text-gray-400">Red Teaming, Bug Bounty Guidance, Employee Awareness.</p>
-            </div>
+            <!-- باقي الخدمات -->
         </div>
     </div>
-    <footer class="bg-black border-t border-white/10 py-12 mt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
-        <p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
-        <p class="mt-2">
-            <a href="mailto:yasserhamdy910@gmail.com" class="hover:text-red-500">yasserhamdy910@gmail.com</a>
-        </p>
-    </div>
-</footer>
+
+    <!-- Footer -->
 </body>
 </html>

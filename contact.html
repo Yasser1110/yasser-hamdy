@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div class="text-2xl font-bold">Yasser<span class="text-red-500">.</span>Hamdy</div>
+        <div class="flex gap-8 text-sm font-medium">
+            <a href="index.html" class="hover:text-red-500 transition">Home</a>
+            <a href="about.html" class="hover:text-red-500 transition">About</a>
+            <a href="projects.html" class="hover:text-red-500 transition">Projects</a>
+            <a href="services.html" class="hover:text-red-500 transition">Services</a>
+            <a href="contact.html" class="hover:text-red-500 transition">Contact</a>
+        </div>
+    </div>
+</nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yasser Hamdy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .glass { background: rgba(15,15,15,0.85); backdrop-filter: blur(16px); }
+        .accent { color: #ff3b3b; }
+    </style>
+</head>
+<body>
+    <nav class="fixed top-0 w-full glass z-50"> ... نفس الـ navbar السابق ... </nav>
+
+    <div class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+        <h1 class="text-5xl font-bold mb-10 accent">Get In Touch</h1>
+        
+        <div class="glass p-10 rounded-3xl">
+            <form id="bookingForm" class="space-y-6">
+                <div>
+                    <label class="block mb-2">Your Name</label>
+                    <input type="text" id="name" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4" required>
+                </div>
+                <div>
+                    <label class="block mb-2">Company</label>
+                    <input type="text" id="company" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4">
+                </div>
+                <div>
+                    <label class="block mb-2">Email</label>
+                    <input type="email" id="email" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4" required>
+                </div>
+                <div>
+                    <label class="block mb-2">Preferred Date & Time</label>
+                    <input type="datetime-local" id="datetime" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4" required>
+                </div>
+                <div>
+                    <label class="block mb-2">Project Type</label>
+                    <select id="type" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4">
+                        <option>Web Penetration Testing</option>
+                        <option>VoIP / Network Security</option>
+                        <option>Secure Development Consultation</option>
+                        <option>Red Teaming / Bug Bounty</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-5 rounded-2xl text-lg font-medium">
+                    Book Consultation
+                </button>
+            </form>
+        </div>
+
+        <p class="text-center text-gray-400 mt-8">
+            Or email me directly: <a href="mailto:yasserhamdy910@gmail.com" class="accent">yasserhamdy910@gmail.com</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                datetime: document.getElementById('datetime').value,
+                type: document.getElementById('type').value
+            };
+            console.log("New Booking:", data);
+            alert("تم إرسال طلب الحجز بنجاح! (سيتم حفظ البيانات لاحقاً)");
+            this.reset();
+        });
+    </script>
+    <footer class="bg-black border-t border-white/10 py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
+        <p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
+        <p class="mt-2">
+            <a href="mailto:yasserhamdy910@gmail.com" class="hover:text-red-500">yasserhamdy910@gmail.com</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

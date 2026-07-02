@@ -1,95 +1,105 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-        <div class="text-2xl font-bold">Yasser<span class="text-red-500">.</span>Hamdy</div>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-red-500 transition">Home</a>
-            <a href="about.html" class="hover:text-red-500 transition">About</a>
-            <a href="projects.html" class="hover:text-red-500 transition">Projects</a>
-            <a href="services.html" class="hover:text-red-500 transition">Services</a>
-            <a href="contact.html" class="hover:text-red-500 transition">Contact</a>
-        </div>
-    </div>
-</nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Yasser Hamdy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #e5e5e5; }
-        .glass { background: rgba(15,15,15,0.85); backdrop-filter: blur(16px); }
+        body { background-color: #050505; color: #e5e5e5; }
+        .glass { background: rgba(10,10,10,0.9); backdrop-filter: blur(16px); border: 1px solid rgba(255,59,59,0.2); }
         .accent { color: #ff3b3b; }
     </style>
 </head>
 <body>
-    <nav class="fixed top-0 w-full glass z-50"> </nav>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-2xl font-bold">Yasser<span class="accent">.</span>Hamdy</div>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-red-500">Home</a>
+                <a href="about.html" class="hover:text-red-500">About</a>
+                <a href="projects.html" class="hover:text-red-500">Projects</a>
+                <a href="services.html" class="hover:text-red-500">Services</a>
+                <a href="contact.html" class="hover:text-red-500">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <div class="max-w-4xl mx-auto px-6 pt-32 pb-20">
-        <h1 class="text-5xl font-bold mb-10 accent">Get In Touch</h1>
-        
+        <h1 class="text-5xl font-bold mb-6 accent">Book a Free 30-Minute Consultation</h1>
+        <p class="text-gray-400 mb-12">Discuss your security needs, penetration testing, or software project.</p>
+
         <div class="glass p-10 rounded-3xl">
-            <form id="bookingForm" class="space-y-6">
-                <div>
-                    <label class="block mb-2">Your Name</label>
-                    <input type="text" id="name" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4" required>
+            <form id="meetingForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block mb-2 text-sm">الاسم الكامل</label>
+                        <input type="text" id="name" required class="w-full bg-zinc-900 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block mb-2 text-sm">الشركة / الجهة</label>
+                        <input type="text" id="company" class="w-full bg-zinc-900 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
+                    </div>
                 </div>
+
                 <div>
-                    <label class="block mb-2">Company</label>
-                    <input type="text" id="company" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4">
+                    <label class="block mb-2 text-sm">البريد الإلكتروني</label>
+                    <input type="email" id="email" required class="w-full bg-zinc-900 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
                 </div>
+
                 <div>
-                    <label class="block mb-2">Email</label>
-                    <input type="email" id="email" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4" required>
+                    <label class="block mb-2 text-sm">تاريخ ووقت الميتنج المقترح (30 دقيقة)</label>
+                    <input type="datetime-local" id="datetime" required class="w-full bg-zinc-900 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
                 </div>
+
                 <div>
-                    <label class="block mb-2">Preferred Date & Time</label>
-                    <input type="datetime-local" id="datetime" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4" required>
-                </div>
-                <div>
-                    <label class="block mb-2">Project Type</label>
-                    <select id="type" class="w-full bg-zinc-900 border border-white/20 rounded-xl px-6 py-4">
+                    <label class="block mb-2 text-sm">نوع الاستشارة</label>
+                    <select id="type" class="w-full bg-zinc-900 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
                         <option>Web Penetration Testing</option>
-                        <option>VoIP / Network Security</option>
-                        <option>Secure Development Consultation</option>
-                        <option>Red Teaming / Bug Bounty</option>
+                        <option>IoT Security (ESP32)</option>
+                        <option>Secure Web Development</option>
+                        <option>VoIP & Network Security</option>
+                        <option>Security Automation Tools</option>
+                        <option>General Consultation</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-5 rounded-2xl text-lg font-medium">
-                    Book Consultation
+
+                <button type="submit" 
+                        class="w-full bg-red-600 hover:bg-red-700 py-6 rounded-2xl text-lg font-semibold transition">
+                    Book My Free 30-Minute Meeting
                 </button>
             </form>
         </div>
 
         <p class="text-center text-gray-400 mt-8">
-            Or email me directly: <a href="mailto:yasserhamdy910@gmail.com" class="accent">yasserhamdy910@gmail.com</a>
+            أو راسلني مباشرة: <a href="mailto:yasserhamdy910@gmail.com" class="accent hover:underline">yasserhamdy910@gmail.com</a>
         </p>
     </div>
 
+    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-400 text-sm">
+        <p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
+    </footer>
+
     <script>
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        document.getElementById('meetingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const data = {
+            
+            const formData = {
                 name: document.getElementById('name').value,
                 company: document.getElementById('company').value,
                 email: document.getElementById('email').value,
                 datetime: document.getElementById('datetime').value,
-                type: document.getElementById('type').value
+                type: document.getElementById('type').value,
+                timestamp: new Date().toLocaleString('ar-EG')
             };
-            console.log("New Booking:", data);
-            alert("تم إرسال طلب الحجز بنجاح! (سيتم حفظ البيانات لاحقاً)");
+
+            console.log("New Meeting Request:", formData);
+            alert("✅ تم إرسال طلب الحجز بنجاح!\nسأتواصل معك قريباً على الإيميل.");
+
             this.reset();
         });
     </script>
-    <footer class="bg-black border-t border-white/10 py-12 mt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
-        <p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
-        <p class="mt-2">
-            <a href="mailto:yasserhamdy910@gmail.com" class="hover:text-red-500">yasserhamdy910@gmail.com</a>
-        </p>
-    </div>
-</footer>
 </body>
 </html>

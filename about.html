@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head> 
-    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-        <div class="text-2xl font-bold">Yasser<span class="text-red-500">.</span>Hamdy</div>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-red-500 transition">Home</a>
-            <a href="about.html" class="hover:text-red-500 transition">About</a>
-            <a href="projects.html" class="hover:text-red-500 transition">Projects</a>
-            <a href="services.html" class="hover:text-red-500 transition">Services</a>
-            <a href="contact.html" class="hover:text-red-500 transition">Contact</a>
-        </div>
-    </div>
-</nav>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Yasser Hamdy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style> body { background-color: #0a0a0a; color: #e5e5e5; } .glass { background: rgba(15,15,15,0.85); backdrop-filter: blur(16px); } </style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Yasser Hamdy</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+body { background-color: #050505; color: #e5e5e5; }
+.glass { background: rgba(10,10,10,0.9); backdrop-filter: blur(16px); border: 1px solid rgba(255,59,59,0.2); }
+.accent { color: #ff3b3b; }
+</style>
 </head>
 <body>
-    <nav class="fixed top-0 w-full glass z-50"> ... نفس الـ navbar السابق ...</nav>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/10">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+<div class="text-2xl font-bold">Yasser<span class="accent">.</span>Hamdy</div>
 
-    <div class="max-w-5xl mx-auto px-6 pt-32 pb-20">
-        <h1 class="text-5xl font-bold mb-10 accent">My Journey</h1>
-        <p class="text-lg text-gray-300 leading-relaxed">
-            Telecommunication & Electronics Engineer with strong passion for Cybersecurity. 
-            I combine CCNA networking expertise with practical offensive security experience.
-        </p>
+<div class="hidden md:flex gap-8 text-sm font-medium">
+<a href="index.html" class="hover:text-red-500">Home</a>
+<a href="about.html" class="hover:text-red-500">About</a>
+<a href="projects.html" class="hover:text-red-500">Projects</a>
+<a href="services.html" class="hover:text-red-500">Services</a>
+<a href="contact.html" class="hover:text-red-500">Contact</a>
+</div>
 
-        <div class="mt-12 grid md:grid-cols-2 gap-10">
-            <div class="glass p-8 rounded-3xl">
-                <h2 class="text-2xl mb-6">Achievements</h2>
-                <ul class="space-y-4 text-gray-300">
-                    <li>• Multiple HackerOne reports (scores 8 & 9.1)</li>
-                    <li>• Discovered XSS on mnshet.net (UAE news website)</li>
-                    <li>• AI Internship at NTI (2026)</li>
-                    <li>• CCNA with 98% (NTI 2025)</li>
-                    <li>• Build A Secure VOIP System between two branches (Saudia Arabia & Egypt) using GSM Gateway with 4 SIM cards.</li>
+<button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden text-2xl">
+<i class="fa-solid fa-bars"></i>
+</button>
+</div>
 
-                </ul>
-            </div>
-            <div class="glass p-8 rounded-3xl">
-                <h2 class="text-2xl mb-6">Experience</h2>
-                <p> •Telecom Egypt Internship 
-                    • Smart Technology Robotics 
-                    • NTI CCNA Training</p>
-            </div>
-        </div>
-    </div>
-    <footer class="bg-black border-t border-white/10 py-12 mt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
-        <p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
-        <p class="mt-2">
-            <a href="mailto:yasserhamdy910@gmail.com" class="hover:text-red-500">yasserhamdy910@gmail.com</a>
-        </p>
-    </div>
+<div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 px-6 pb-6 text-sm font-medium border-t border-white/10 pt-4">
+<a href="index.html" class="hover:text-red-500">Home</a>
+<a href="about.html" class="hover:text-red-500">About</a>
+<a href="projects.html" class="hover:text-red-500">Projects</a>
+<a href="services.html" class="hover:text-red-500">Services</a>
+<a href="contact.html" class="hover:text-red-500">Contact</a>
+</div>
+</nav>
+
+<div class="max-w-5xl mx-auto px-6 pt-28 md:pt-32 pb-16 md:pb-20">
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 accent">My Professional Journey</h1>
+<p class="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-10 md:mb-16 max-w-3xl">
+Telecommunication & Electronics Engineer with deep passion for Cybersecurity.
+I combine strong networking foundations with practical offensive security and software development experience.
+</p>
+
+<div class="grid md:grid-cols-2 gap-6 md:gap-10">
+<div class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl">
+<h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 accent">Key Achievements</h2>
+<ul class="space-y-4 sm:space-y-5 text-sm sm:text-base text-gray-300">
+<li>• Multiple valid reports on HackerOne (scores 8 & 9.1)</li>
+<li>• Discovered real-world XSS on mnshet.net (UAE news website)</li>
+<li>• AI Internship at National Telecommunication Institute (NTI - 2026)</li>
+<li>• CCNA Certified with 98% score (NTI 2025)</li>
+<li>• Graduation Project: Landmine Detection Robot (ITAC Award 30K EGP + 3rd Place Sharjah 17K AED)</li>
+</ul>
+</div>
+
+<div class="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl">
+<h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 accent">Experience</h2>
+<ul class="space-y-5 sm:space-y-6 text-sm sm:text-base text-gray-400">
+<li><strong>HackerOne</strong><br>Bug Bounty Hunter (Dec 2025 - Present)</li>
+<li><strong>National Telecommunication Institute</strong><br>CCNA & AI Training</li>
+<li><strong>Telecom Egypt</strong><br>Network Internship Trainee (2022)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-black border-t border-white/10 py-12">
+<div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
+<p>© 2026 Yasser Hamdy. All Rights Reserved.</p>
+</div>
 </footer>
 </body>
 </html>
